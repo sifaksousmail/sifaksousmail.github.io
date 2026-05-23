@@ -6,6 +6,44 @@
 
   <title>Sifaks Ousmail | GitHub Pages</title>
   <meta name="description" content="GitHub Pages landing page for Sifaks Ousmail, researcher in second language acquisition, applied linguistics, AI-assisted language learning, and French pronunciation training." />
+  <meta name="author" content="Sifaks Ousmail" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#f6f7fb" />
+  <link rel="canonical" href="https://sifaksousmail.github.io/" />
+
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="Sifaks Ousmail | GitHub Pages" />
+  <meta property="og:description" content="A lightweight bridge between Sifaks Ousmail's GitHub identity, official website, academic profile, and research projects." />
+  <meta property="og:url" content="https://sifaksousmail.github.io/" />
+  <meta property="og:site_name" content="Sifaks Ousmail" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Sifaks Ousmail | GitHub Pages" />
+  <meta name="twitter:description" content="A lightweight bridge between Sifaks Ousmail's GitHub identity, official website, academic profile, and research projects." />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Sifaks Ousmail",
+      "url": "https://sifaks.com",
+      "mainEntityOfPage": "https://sifaksousmail.github.io/",
+      "sameAs": [
+        "https://sifaks.com",
+        "https://github.com/sifaksousmail",
+        "https://app.sifaks.com",
+        "https://www.linkedin.com/in/sifaksousmail",
+        "https://www.languagesciences.cam.ac.uk/staff/sifaks-ousmail"
+      ],
+      "knowsAbout": [
+        "Second language acquisition",
+        "Applied linguistics",
+        "AI-assisted language learning",
+        "French pronunciation training",
+        "Educational technology"
+      ]
+    }
+  </script>
 
   <style>
     :root {
@@ -14,7 +52,9 @@
       --text: #0f172a;
       --muted: #475569;
       --line: #e5e7eb;
-      --accent: #0f172a;
+      --accent: #12315f;
+      --accent-soft: #eef5ff;
+      --accent-line: #b8c9e4;
       --link: #0b63ce;
     }
 
@@ -26,10 +66,7 @@
       margin: 0;
       min-height: 100vh;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background:
-        radial-gradient(circle at top left, rgba(37, 99, 235, 0.10), transparent 32%),
-        radial-gradient(circle at bottom right, rgba(14, 165, 233, 0.08), transparent 30%),
-        var(--bg);
+      background: linear-gradient(180deg, #f8fafc 0%, var(--bg) 100%);
       color: var(--text);
       line-height: 1.6;
     }
@@ -37,79 +74,141 @@
     main {
       width: min(920px, calc(100% - 40px));
       margin: 0 auto;
-      padding: 72px 0 48px;
+      padding: 28px 0 28px;
     }
 
     .card {
       background: rgba(255, 255, 255, 0.92);
       border: 1px solid var(--line);
-      border-radius: 28px;
-      padding: 48px;
-      box-shadow: 0 24px 70px rgba(15, 23, 42, 0.08);
+      border-radius: 18px;
+      padding: 34px 46px;
+      box-shadow: 0 18px 52px rgba(15, 23, 42, 0.06);
     }
 
     .eyebrow {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      margin-bottom: 20px;
-      padding: 7px 12px;
+      margin-bottom: 12px;
+      padding: 5px 11px;
       border: 1px solid var(--line);
       border-radius: 999px;
       color: var(--muted);
-      font-size: 14px;
+      font-size: 12px;
       font-weight: 600;
       background: #f8fafc;
     }
 
     h1 {
       margin: 0;
-      font-size: clamp(40px, 7vw, 72px);
+      font-size: clamp(38px, 5.2vw, 56px);
       line-height: 1;
-      letter-spacing: -0.06em;
+      letter-spacing: 0;
     }
 
     .subtitle {
       max-width: 720px;
-      margin: 24px 0 0;
-      font-size: 21px;
+      margin: 16px 0 0;
+      font-size: 18px;
       color: var(--muted);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .primary-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 38px;
+      padding: 8px 14px;
+      border: 1px solid var(--accent);
+      border-radius: 10px;
+      background: var(--accent);
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+    }
+
+    .primary-cta:hover {
+      background: #0c254d;
+      box-shadow: 0 10px 24px rgba(18, 49, 95, 0.18);
+      transform: translateY(-1px);
+    }
+
+    .primary-cta:focus-visible,
+    .link-card:focus-visible {
+      outline: 3px solid rgba(11, 99, 206, 0.22);
+      outline-offset: 3px;
+    }
+
+    .bridge {
+      max-width: 720px;
+      margin: 14px 0 0;
+      padding-left: 12px;
+      border-left: 2px solid var(--line);
+      font-size: 14px;
+      color: #334155;
+      line-height: 1.5;
     }
 
     .intro {
       max-width: 720px;
-      margin: 18px 0 0;
-      font-size: 18px;
+      margin: 12px 0 0;
+      font-size: 16px;
       color: var(--muted);
     }
 
     .section {
-      margin-top: 40px;
-      padding-top: 32px;
+      margin-top: 22px;
+      padding-top: 20px;
       border-top: 1px solid var(--line);
     }
 
     h2 {
-      margin: 0 0 18px;
-      font-size: 18px;
-      letter-spacing: -0.02em;
+      margin: 0 0 10px;
+      font-size: 16px;
+      letter-spacing: 0;
     }
 
     .links {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
+      gap: 10px;
     }
 
     .link-card {
-      display: block;
-      padding: 18px 20px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 12px;
+      min-height: 58px;
+      padding: 11px 14px;
       border: 1px solid var(--line);
-      border-radius: 18px;
+      border-radius: 12px;
       background: #ffffff;
       color: var(--text);
       text-decoration: none;
       transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+    }
+
+    .link-card.primary {
+      grid-column: 1 / -1;
+      min-height: 64px;
+      border-color: var(--accent-line);
+      border-left: 4px solid var(--accent);
+      background: var(--accent-soft);
+      box-shadow: inset 0 0 0 1px rgba(18, 49, 95, 0.03);
+    }
+
+    .link-card.primary .link-title {
+      color: var(--accent);
     }
 
     .link-card:hover {
@@ -118,33 +217,55 @@
       box-shadow: 0 14px 34px rgba(15, 23, 42, 0.08);
     }
 
+    .link-copy {
+      min-width: 0;
+    }
+
     .link-title {
       display: block;
       font-weight: 700;
-      margin-bottom: 4px;
+      margin-bottom: 0;
     }
 
     .link-url {
       display: block;
       color: var(--link);
-      font-size: 14px;
+      font-size: 13px;
       word-break: break-word;
+    }
+
+    .link-meta {
+      display: block;
+      margin-top: 0;
+      color: #64748b;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .link-cue {
+      color: #94a3b8;
+      font-size: 17px;
+      line-height: 1;
+    }
+
+    .link-card.primary .link-cue {
+      color: var(--accent);
     }
 
     .tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 12px;
+      gap: 8px;
+      margin-top: 8px;
     }
 
     .tag {
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: #f1f5f9;
+      padding: 3px 0;
+      border-bottom: 1px solid #dbe3ee;
+      background: transparent;
       color: #334155;
-      font-size: 14px;
-      font-weight: 600;
+      font-size: 13px;
+      font-weight: 650;
     }
 
     footer {
@@ -157,24 +278,29 @@
     @media (max-width: 720px) {
       main {
         width: min(100% - 24px, 920px);
-        padding: 32px 0;
+        padding: 18px 0;
       }
 
       .card {
-        padding: 30px 22px;
-        border-radius: 22px;
+        padding: 24px 22px;
+        border-radius: 16px;
       }
 
       .subtitle {
-        font-size: 18px;
+        font-size: 17px;
       }
 
       .intro {
-        font-size: 16px;
+        font-size: 15px;
       }
 
       .links {
         grid-template-columns: 1fr;
+      }
+
+      .link-card,
+      .link-card.primary {
+        min-height: 70px;
       }
     }
   </style>
@@ -197,28 +323,58 @@
         a French pronunciation learning app for Chinese-speaking learners of French.
       </p>
 
+      <div class="hero-actions">
+        <a class="primary-cta" href="https://sifaks.com">Visit sifaks.com</a>
+      </div>
+
+      <p class="bridge">
+        This page connects my GitHub identity with my official website, academic profile,
+        and research projects.
+      </p>
+
       <section class="section">
         <h2>Main links</h2>
 
         <div class="links">
-          <a class="link-card" href="https://sifaks.com">
-            <span class="link-title">Official website</span>
-            <span class="link-url">sifaks.com</span>
+          <a class="link-card primary" href="https://sifaks.com">
+            <span class="link-copy">
+              <span class="link-title">Official website</span>
+              <span class="link-url">sifaks.com</span>
+              <span class="link-meta">Primary destination</span>
+            </span>
+            <span class="link-cue" aria-hidden="true">-&gt;</span>
           </a>
 
           <a class="link-card" href="https://github.com/sifaksousmail">
-            <span class="link-title">GitHub profile</span>
-            <span class="link-url">github.com/sifaksousmail</span>
+            <span class="link-copy">
+              <span class="link-title">GitHub profile</span>
+              <span class="link-url">github.com/sifaksousmail</span>
+            </span>
+            <span class="link-cue" aria-hidden="true">-&gt;</span>
           </a>
 
           <a class="link-card" href="https://app.sifaks.com">
-            <span class="link-title">EuuuhFrench AI</span>
-            <span class="link-url">app.sifaks.com</span>
+            <span class="link-copy">
+              <span class="link-title">EuuuhFrench AI</span>
+              <span class="link-url">app.sifaks.com</span>
+            </span>
+            <span class="link-cue" aria-hidden="true">-&gt;</span>
+          </a>
+
+          <a class="link-card" href="https://www.languagesciences.cam.ac.uk/staff/sifaks-ousmail">
+            <span class="link-copy">
+              <span class="link-title">Cambridge profile</span>
+              <span class="link-url">languagesciences.cam.ac.uk/staff/sifaks-ousmail</span>
+            </span>
+            <span class="link-cue" aria-hidden="true">-&gt;</span>
           </a>
 
           <a class="link-card" href="https://www.linkedin.com/in/sifaksousmail">
-            <span class="link-title">LinkedIn</span>
-            <span class="link-url">linkedin.com/in/sifaksousmail</span>
+            <span class="link-copy">
+              <span class="link-title">LinkedIn</span>
+              <span class="link-url">linkedin.com/in/sifaksousmail</span>
+            </span>
+            <span class="link-cue" aria-hidden="true">-&gt;</span>
           </a>
         </div>
       </section>
