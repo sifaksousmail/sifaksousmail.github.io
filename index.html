@@ -8,78 +8,174 @@
   <meta name="description" content="GitHub Pages landing page for Sifaks Ousmail, researcher in second language acquisition, applied linguistics, AI-assisted language learning, and French pronunciation training." />
 
   <style>
+    :root {
+      --bg: #f6f7fb;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --line: #e5e7eb;
+      --accent: #0f172a;
+      --link: #0b63ce;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       margin: 0;
-      background: #f7f8fb;
-      color: #111827;
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(37, 99, 235, 0.10), transparent 32%),
+        radial-gradient(circle at bottom right, rgba(14, 165, 233, 0.08), transparent 30%),
+        var(--bg);
+      color: var(--text);
       line-height: 1.6;
     }
 
     main {
-      max-width: 760px;
+      width: min(920px, calc(100% - 40px));
       margin: 0 auto;
-      padding: 80px 24px;
-    }
-
-    h1 {
-      font-size: 42px;
-      margin-bottom: 12px;
-      letter-spacing: -0.03em;
-    }
-
-    h2 {
-      font-size: 22px;
-      margin-top: 36px;
-    }
-
-    p {
-      font-size: 18px;
-      color: #374151;
+      padding: 72px 0 48px;
     }
 
     .card {
-      background: white;
-      border: 1px solid #e5e7eb;
-      border-radius: 20px;
-      padding: 28px;
-      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 48px;
+      box-shadow: 0 24px 70px rgba(15, 23, 42, 0.08);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 20px;
+      padding: 7px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 600;
+      background: #f8fafc;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(40px, 7vw, 72px);
+      line-height: 1;
+      letter-spacing: -0.06em;
+    }
+
+    .subtitle {
+      max-width: 720px;
+      margin: 24px 0 0;
+      font-size: 21px;
+      color: var(--muted);
+    }
+
+    .intro {
+      max-width: 720px;
+      margin: 18px 0 0;
+      font-size: 18px;
+      color: var(--muted);
+    }
+
+    .section {
+      margin-top: 40px;
+      padding-top: 32px;
+      border-top: 1px solid var(--line);
+    }
+
+    h2 {
+      margin: 0 0 18px;
+      font-size: 18px;
+      letter-spacing: -0.02em;
     }
 
     .links {
       display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 14px;
-      margin-top: 28px;
     }
 
-    a {
-      color: #0b63ce;
+    .link-card {
+      display: block;
+      padding: 18px 20px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: #ffffff;
+      color: var(--text);
+      text-decoration: none;
+      transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+    }
+
+    .link-card:hover {
+      transform: translateY(-2px);
+      border-color: #cbd5e1;
+      box-shadow: 0 14px 34px rgba(15, 23, 42, 0.08);
+    }
+
+    .link-title {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .link-url {
+      display: block;
+      color: var(--link);
+      font-size: 14px;
+      word-break: break-word;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .tag {
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: #f1f5f9;
+      color: #334155;
+      font-size: 14px;
       font-weight: 600;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 12px 16px;
-      border-radius: 12px;
-      background: #111827;
-      color: white;
-      text-decoration: none;
-    }
-
-    .button:hover {
-      text-decoration: none;
-      background: #1f2937;
     }
 
     footer {
-      margin-top: 40px;
+      margin-top: 28px;
+      text-align: center;
       font-size: 14px;
-      color: #6b7280;
+      color: #64748b;
+    }
+
+    @media (max-width: 720px) {
+      main {
+        width: min(100% - 24px, 920px);
+        padding: 32px 0;
+      }
+
+      .card {
+        padding: 30px 22px;
+        border-radius: 22px;
+      }
+
+      .subtitle {
+        font-size: 18px;
+      }
+
+      .intro {
+        font-size: 16px;
+      }
+
+      .links {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -87,35 +183,58 @@
 <body>
   <main>
     <section class="card">
+      <div class="eyebrow">GitHub Pages · Sifaks Ousmail</div>
+
       <h1>Sifaks Ousmail</h1>
 
-      <p>
+      <p class="subtitle">
         Researcher in second language acquisition, applied linguistics,
         AI-assisted language learning, and French pronunciation training.
       </p>
 
-      <p>
-        I build research-based educational tools, including
-        <strong>EuuuhFrench AI</strong>, a French pronunciation learning app
-        for Chinese-speaking learners of French.
+      <p class="intro">
+        I build research-based educational tools, including <strong>EuuuhFrench AI</strong>,
+        a French pronunciation learning app for Chinese-speaking learners of French.
       </p>
 
-      <h2>Main links</h2>
+      <section class="section">
+        <h2>Main links</h2>
 
-      <div class="links">
-        <a class="button" href="https://sifaks.com">Official website: sifaks.com</a>
-        <a href="https://github.com/sifaksousmail">GitHub profile: github.com/sifaksousmail</a>
-        <a href="https://app.sifaks.com">EuuuhFrench AI app: app.sifaks.com</a>
-        <a href="https://www.linkedin.com/in/sifaksousmail">LinkedIn profile</a>
-      </div>
+        <div class="links">
+          <a class="link-card" href="https://sifaks.com">
+            <span class="link-title">Official website</span>
+            <span class="link-url">sifaks.com</span>
+          </a>
 
-      <h2>Research interests</h2>
+          <a class="link-card" href="https://github.com/sifaksousmail">
+            <span class="link-title">GitHub profile</span>
+            <span class="link-url">github.com/sifaksousmail</span>
+          </a>
 
-      <p>
-        Second language acquisition, applied linguistics, French pronunciation,
-        AI-assisted language learning, educational technology, and pronunciation
-        learning for Chinese-speaking learners of French.
-      </p>
+          <a class="link-card" href="https://app.sifaks.com">
+            <span class="link-title">EuuuhFrench AI</span>
+            <span class="link-url">app.sifaks.com</span>
+          </a>
+
+          <a class="link-card" href="https://www.linkedin.com/in/sifaksousmail">
+            <span class="link-title">LinkedIn</span>
+            <span class="link-url">linkedin.com/in/sifaksousmail</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Research interests</h2>
+
+        <div class="tags">
+          <span class="tag">Second language acquisition</span>
+          <span class="tag">Applied linguistics</span>
+          <span class="tag">French pronunciation</span>
+          <span class="tag">AI-assisted language learning</span>
+          <span class="tag">Educational technology</span>
+          <span class="tag">Chinese-speaking learners of French</span>
+        </div>
+      </section>
     </section>
 
     <footer>
